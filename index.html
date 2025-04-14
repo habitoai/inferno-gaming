@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno Gaming | Home</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="flame-container">
+        <div class="flame-wrapper">
+            <div class="flame red"></div>
+            <div class="flame orange"></div>
+            <div class="flame gold"></div>
+            <div class="flame white"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <div class="logo-flame">
+                <div class="flame-mini red"></div>
+                <div class="flame-mini orange"></div>
+                <div class="flame-mini gold"></div>
+            </div>
+            <h1>INFERNO<span>GAMING</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/teams.html">Teams</a></li>
+                <li><a href="pages/tournaments.html">Tournaments</a></li>
+                <li><a href="pages/news.html">News</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="#contact" class="btn-join">Join Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- 3D Spline Model Container positioned first in the hero section -->
+            <div id="spline-container" class="spline-container hero-spline"></div>
+            <div class="hero-content">
+                <h2>DOMINATE THE <span class="highlight">BATTLEFIELD</span></h2>
+                <p>Join the elite gaming community where passion meets skill</p>
+                <div class="hero-buttons">
+                    <a href="#join" class="btn btn-primary">Join The Clan</a>
+                    <a href="#tournaments" class="btn btn-secondary">Upcoming Tournaments</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="teams" class="teams">
+            <div class="section-header">
+                <h2>OUR <span class="highlight">TEAMS</span></h2>
+                <p>Elite squads conquering multiple gaming universes</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-icon"><i class="fas fa-crosshairs"></i></div>
+                    <h3>FPS Division</h3>
+                    <p>Dominating in Valorant, CS:GO, and Apex Legends</p>
+                    <a href="pages/teams.html#fps" class="team-link">View Team <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon"><i class="fas fa-chess-rook"></i></div>
+                    <h3>Strategy Division</h3>
+                    <p>Masters of League of Legends and Dota 2</p>
+                    <a href="pages/teams.html#strategy" class="team-link">View Team <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Battle Royale</h3>
+                    <p>Champions in Fortnite and PUBG competitions</p>
+                    <a href="pages/teams.html#battle-royale" class="team-link">View Team <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon"><i class="fas fa-car"></i></div>
+                    <h3>Racing Division</h3>
+                    <p>Speed demons in Forza and Gran Turismo</p>
+                    <a href="pages/teams.html#racing" class="team-link">View Team <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional sections omitted for brevity -->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-flame">
+                    <div class="flame-mini red"></div>
+                    <div class="flame-mini orange"></div>
+                    <div class="flame-mini gold"></div>
+                </div>
+                <h2>INFERNO<span>GAMING</span></h2>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/teams.html">Teams</a></li>
+                        <li><a href="pages/tournaments.html">Tournaments</a></li>
+                        <li><a href="pages/news.html">News</a></li>
+                        <li><a href="pages/about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="https://twitch.tv" target="_blank"><i class="fab fa-twitch"></i> Twitch</a></li>
+                        <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Inferno Gaming. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <!-- Import map polyfill for browsers without native support -->
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <!-- Import Spline Runtime -->
+    <script type="importmap">
+        {
+            "imports": {
+                "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@1.0.37/build/runtime.js",
+                "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+                "three/examples/jsm/controls/OrbitControls.js": "https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js",
+                "three/examples/jsm/utils/BufferGeometryUtils.js": "https://unpkg.com/three@0.152.2/examples/jsm/utils/BufferGeometryUtils.js",
+                "three/examples/jsm/loaders/GLTFLoader.js": "https://unpkg.com/three@0.152.2/examples/jsm/loaders/GLTFLoader.js",
+                "three/examples/jsm/loaders/DRACOLoader.js": "https://unpkg.com/three@0.152.2/examples/jsm/loaders/DRACOLoader.js",
+                "three/examples/jsm/libs/draco/gltf/draco_decoder.js": "https://unpkg.com/three@0.152.2/examples/jsm/libs/draco/gltf/draco_decoder.js",
+                "@splinetool/loader": "https://unpkg.com/@splinetool/loader@0.9.508/build/SplineLoader.js"
+            }
+        }
+    </script>
+    <!-- Directly load model without delay -->
+    <script type="module">
+        import { Application } from '@splinetool/runtime';
+        
+        // First try the simple runtime approach for direct loading
+        function loadSimpleModel() {
+            try {
+                const container = document.getElementById('spline-container');
+                if (!container) return;
+                
+                // Set container styling
+                container.style.position = 'absolute';
+                container.style.zIndex = '1';
+                container.style.background = 'var(--background-dark)';
+                
+                // Create canvas
+                const canvas = document.createElement('canvas');
+                canvas.id = 'canvas3d';
+                canvas.style.width = '100%';
+                canvas.style.height = '100%';
+                container.innerHTML = '';
+                container.appendChild(canvas);
+                
+                // Create Spline app with proper settings
+                const app = new Application(canvas, {
+                    autoRender: true,
+                    autostart: true,
+                    background: '#0a0a0a'
+                });
+                
+                // Set canvas styling
+                canvas.style.opacity = '1';
+                canvas.style.visibility = 'visible';
+                
+                // Load the model
+                app.load('https://prod.spline.design/emqf2cwTF2WoDqCZ/scene.splinecode')
+                    .then(() => {
+                        console.log('Spline model loaded with runtime');
+                        container.classList.add('scene-loaded');
+                        if (app.enablePan) app.enablePan(false);
+                        if (app.enableZoom) app.enableZoom(false);
+                    })
+                    .catch(error => {
+                        console.error('Error loading model with runtime:', error);
+                        // Try advanced loader on failure
+                        tryAdvancedLoader();
+                    });
+                    
+                window.splineApp = app;
+            } catch (error) {
+                console.error('Error with simple loader:', error);
+                // Try advanced loader on failure
+                tryAdvancedLoader();
+            }
+        }
+        
+        // Try the more advanced Three.js approach if needed
+        async function tryAdvancedLoader() {
+            try {
+                console.log('Trying advanced loader');
+                const module = await import('./assets/js/spline-model.js');
+                const initSplineScene = module.default;
+                initSplineScene();
+            } catch (error) {
+                console.error('Error with advanced loader:', error);
+                const container = document.getElementById('spline-container');
+                if (container) {
+                    container.classList.add('scene-loaded');
+                }
+            }
+        }
+        
+        // Start loading immediately
+        loadSimpleModel();
+        
+        // Double-check on window load
+        window.addEventListener('load', function() {
+            const container = document.getElementById('spline-container');
+            if (!container.classList.contains('scene-loaded')) {
+                console.log('Model not loaded on window load, retrying...');
+                loadSimpleModel();
+            }
+        });
+    </script>
+</body>
+</html>
