@@ -1,0 +1,305 @@
+/* ===== GLOBAL STYLES ===== */
+:root {
+    --primary-color: #ff4500;
+    --primary-light: #ff7e45;
+    --primary-dark: #cc3700;
+    --secondary-color: #4a00e0;
+    --secondary-light: #6c3ce6;
+    --secondary-dark: #3600a9;
+    --accent-color: #ffc107;
+    --text-color: #ffffff;
+    --text-secondary: #b0b0b0;
+    --background-dark: #0a0a0a;
+    --background-card: #151515;
+    --background-gradient: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    --flame-red: #ff4500;
+    --flame-orange: #ff7e00;
+    --flame-gold: #ffcc00;
+    --flame-white: #ffffee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+.highlight {
+    color: var(--primary-color);
+    position: relative;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn:hover:before {
+    left: 0;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== SPLINE 3D MODEL ===== */
+.spline-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: auto; /* Allow interaction with the 3D model */
+    display: none; /* Hide by default */
+}
+
+/* Special styling for the hero section 3D model */
+.hero-spline {
+    display: block !important; /* Force display */
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important; /* Cover the entire hero section */
+    height: 100% !important;
+    z-index: 1 !important; /* Behind the hero:before overlay */
+    pointer-events: none !important; /* Allow clicks to pass through */
+}
+
+/* Hide loading spinner */
+.loading-indicator, .spinner, .loading-text, .error-text {
+    display: none !important;
+}
+
+/* Ensure the 3D model canvas is visible and properly sized */
+.spline-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    opacity: 1 !important; /* Make fully visible */
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+/* Update hero section to accommodate the 3D model */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, var(--background-dark) 0%, rgba(10, 10, 10, 0.6) 70%, rgba(10, 10, 10, 0.3) 100%);
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(10, 10, 10, 0.8) 0%, rgba(10, 10, 10, 0.4) 60%, rgba(10, 10, 10, 0) 100%);
+    z-index: 2; /* Positioned above the 3D model but below the content */
+}
+
+/* Update hero content styles for better visibility on 3D background */
+.hero-content {
+    width: 50%;
+    max-width: 600px;
+    z-index: 5;
+    position: relative;
+    text-align: left;
+    padding: 40px;
+    margin-left: 5%;
+    margin-right: auto;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%);
+    border-radius: 10px;
+    pointer-events: auto;
+}
+
+/* Additional essential styles for flame animation and navigation */
+.flame-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.flame-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) scale(5);
+    width: 100px;
+    height: 100px;
+    opacity: 0.2;
+}
+
+.flame {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50% 50% 0 50%;
+    transform-origin: center bottom;
+    animation: flicker 5s infinite alternate;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background: rgba(10, 10, 10, 0.9);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    position: relative;
+}
+
+/* Animation for loaded scenes */
+.scene-loaded {
+    opacity: 1 !important;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Responsive media queries */
+@media (max-width: 768px) {
+    .hero-content {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(10, 10, 10, 0.95);
+        flex-direction: column;
+        transition: all 0.3s ease;
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding-top: 80px;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
