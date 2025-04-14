@@ -1,0 +1,19 @@
+{
+  "name": "inferno-gaming",
+  "version": "1.0.0",
+  "description": "Inferno Gaming website with 3D Spline models",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@splinetool/runtime": "^1.0.37",
+    "three": "^0.152.2"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "author": "Inferno Gaming",
+  "license": "MIT"
+}
