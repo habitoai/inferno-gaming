@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno Gaming | Teams</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-flame">
+                <div class="flame-mini red"></div>
+                <div class="flame-mini orange"></div>
+                <div class="flame-mini gold"></div>
+            </div>
+            <h1>INFERNO<span>GAMING</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="teams.html" class="active">Teams</a></li>
+                <li><a href="tournaments.html">Tournaments</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact" class="btn-join">Join Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- 3D Spline Model Container -->
+        <div id="spline-container" class="spline-container"></div>
+        
+        <section class="page-banner">
+            <div class="banner-content">
+                <h1>OUR <span class="highlight">TEAMS</span></h1>
+                <p>Meet the players who dominate the competitive gaming scene</p>
+            </div>
+        </section>
+
+        <!-- Teams page content would go here -->
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo-flame">
+                    <div class="flame-mini red"></div>
+                    <div class="flame-mini orange"></div>
+                    <div class="flame-mini gold"></div>
+                </div>
+                <h2>INFERNO<span>GAMING</span></h2>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="teams.html">Teams</a></li>
+                        <li><a href="tournaments.html">Tournaments</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="https://twitch.tv" target="_blank"><i class="fab fa-twitch"></i> Twitch</a></li>
+                        <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Inferno Gaming. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <!-- Import map polyfill for browsers without native support -->
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    
+    <!-- Import Three.js and Spline model -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+                "three/examples/jsm/controls/OrbitControls.js": "https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js",
+                "@splinetool/loader": "https://unpkg.com/@splinetool/loader@0.9.508/build/SplineLoader.js"
+            }
+        }
+    </script>
+    <script type="module">
+        import initSplineScene from '../assets/js/spline-model.js';
+        
+        // Initialize the 3D scene
+        document.addEventListener('DOMContentLoaded', function() {
+            initSplineScene();
+        });
+    </script>
+</body>
+</html>
